@@ -331,8 +331,8 @@ local function IsInDamageList(damage)
     end
     return retval
 end
-
-local function CheckWeaponDamage(ped)
+-- Remove chat status messages on damage
+--[[local function CheckWeaponDamage(ped)
     local detected = false
     for k, v in pairs(QBCore.Shared.Weapons) do
         if HasPedBeenDamagedByWeapon(ped, k, 0) then
@@ -351,7 +351,7 @@ local function CheckWeaponDamage(ped)
         TriggerServerEvent("hospital:server:SetWeaponDamage", CurrentDamageList)
     end
     ClearEntityLastDamageEntity(ped)
-end
+end]]--
 
 local function ApplyImmediateEffects(ped, bone, weapon, damageDone)
     local armor = GetPedArmour(ped)
