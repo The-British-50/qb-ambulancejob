@@ -94,64 +94,97 @@ Config.Locations = { -- Edit the various interaction points for players or creat
 }
 
 Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulance job grade level
-	-- Grade 0 Trainee
+	-- Grade 0 ECA
 	[0] = {
+	},
+	-- Grade 1 Student Paramedic
+	[1] = {
 		["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
 	},
-	-- Grade 1 Paramedic
-	[1] = {
-		["paramedic"] = "Van Ambulance",
-        ["ER2"] = "Skoda Octavia RRV",
-	},
-	-- Grade 2 Adv Paramedic
+	-- Grade 2 Paramedic
 	[2] = {
         ["paramedic"] = "Van Ambulance",
-		["RRV1"] = "VW Tourag Advanced Paramedic",
-        ["ER2"] = "VW Tiguan RRV",
-        ["lasb1"] = "BMW Response Motorcycle",
+        ["ambulance"] = "Box Ambulance",
 	},
-	-- Grade 3 Doctor
+	-- Grade 3 HEMS Critical Care Paramedic
 	[3] = {
-        ["paramedic"] = "Van Ambulance",
 		["assistchief"] = "Skoda Octavia HEMS",
+        ["fastresponders"] = "BMW X5 HEMS",
 	},
-	-- Grade 4 Nurse
+	-- Grade 4 Advanced Paramedic
 	[4] = {
         ["paramedic"] = "Van Ambulance",
-		["assistchief"] = "Skoda Octavia HEMS",
+        ["ambulance"] = "Box Ambulance",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
 	},
-    -- Grade 5 Surgeon
+    -- Grade 5 Advanced Paramedic Practitioner
     [5] = {
         ["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
         ["ER1"] = "VW Tiguan RRV",
         ["ER2"] = "Skoda Octavia RRV",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
         ["assistchief"] = "Skoda Octavia HEMS",
 	},
-    -- Grade 6 Station Manager
+    -- Grade 6 HEMS Doctor
     [6] = {
-        ["paramedic"] = "Van Ambulance",
-        ["ambulance"] = "Box Ambulance",
-        ["ER1"] = "VW Tiguan RRV",
-        ["ER2"] = "Skoda Octavia RRV",
-        ["RRV1"] = "VW Tourag Advanced Paramedic",
-        ["specilist"] = "BMW X5 Paramedic Supervisor",
-        ["lasb1"] = "BMW Response Motorcycle",
-        ["fastresponders"] = "BMW X5 Hems Support",
         ["assistchief"] = "Skoda Octavia Hems Support",
+        ["fastresponders"] = "BMW X5 Hems Support",
+        ["specilist"] = "BMW X5 Paramedic Supervisor",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
 	},
-    -- Grade 7 Director
+    -- Grade 7 HEMS Team Leader
     [7] = {
         ["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
-        ["ER1"] = "VW Tiguan RRV",
         ["ER2"] = "Skoda Octavia RRV",
+        ["ER1"] = "VW Tiguan RRV",
         ["RRV1"] = "VW Tourag Advanced Paramedic",
         ["specilist"] = "BMW X5 Paramedic Supervisor",
-        ["lasb1"] = "BMW Response Motorcycle",
-        ["fastresponders"] = "BMW X5 Hems Support",
         ["assistchief"] = "Skoda Octavia Hems Support",
+        ["fastresponders"] = "BMW X5 Hems Support",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
+        ["lasb1"] = "BMW Response Motorcycle",
+	}
+    -- Grade 8 Clinical Team Leader
+    [8] = {
+        ["paramedic"] = "Van Ambulance",
+        ["ambulance"] = "Box Ambulance",
+        ["ER2"] = "Skoda Octavia RRV",
+        ["ER1"] = "VW Tiguan RRV",
+        ["RRV1"] = "VW Tourag Advanced Paramedic",
+        ["specilist"] = "BMW X5 Paramedic Supervisor",
+        ["assistchief"] = "Skoda Octavia Hems Support",
+        ["fastresponders"] = "BMW X5 Hems Support",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
+        ["lasb1"] = "BMW Response Motorcycle",
+	}
+    -- Grade 9 Deputy Chief Executive Paramedic
+    [9] = {
+        ["paramedic"] = "Van Ambulance",
+        ["ambulance"] = "Box Ambulance",
+        ["ER2"] = "Skoda Octavia RRV",
+        ["ER1"] = "VW Tiguan RRV",
+        ["RRV1"] = "VW Tourag Advanced Paramedic",
+        ["specilist"] = "BMW X5 Paramedic Supervisor",
+        ["assistchief"] = "Skoda Octavia Hems Support",
+        ["fastresponders"] = "BMW X5 Hems Support",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
+        ["lasb1"] = "BMW Response Motorcycle",
+	}
+    -- Grade 10 Chief Executive Paramedic
+    [10] = {
+        ["paramedic"] = "Van Ambulance",
+        ["ambulance"] = "Box Ambulance",
+        ["ER2"] = "Skoda Octavia RRV",
+        ["ER1"] = "VW Tiguan RRV",
+        ["RRV1"] = "VW Tourag Advanced Paramedic",
+        ["specilist"] = "BMW X5 Paramedic Supervisor",
+        ["assistchief"] = "Skoda Octavia Hems Support",
+        ["fastresponders"] = "BMW X5 Hems Support",
+        ["kodiak"] = "Skoda Kodiak Joint Response", 
+        ["lasb1"] = "BMW Response Motorcycle",
 	}
 }
 
