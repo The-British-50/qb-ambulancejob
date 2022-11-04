@@ -107,19 +107,14 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
         ["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
 	},
-	-- Grade 3 HEMS Critical Care Paramedic
+	-- Grade 3 Advanced Paramedic
 	[3] = {
-		["assistchief"] = "Skoda Octavia HEMS",
-        ["fastresponders"] = "BMW X5 HEMS",
-	},
-	-- Grade 4 Advanced Paramedic
-	[4] = {
         ["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
         ["kodiak"] = "Skoda Kodiak Joint Response", 
 	},
-    -- Grade 5 Advanced Paramedic Practitioner
-    [5] = {
+    -- Grade 4 Advanced Paramedic Practitioner
+    [4] = {
         ["paramedic"] = "Van Ambulance",
         ["ambulance"] = "Box Ambulance",
         ["ER1"] = "VW Tiguan RRV",
@@ -127,12 +122,17 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
         ["kodiak"] = "Skoda Kodiak Joint Response", 
         ["assistchief"] = "Skoda Octavia HEMS",
 	},
+    -- Grade 5 HEMS Critical Care Paramedic
+    [5] = {
+		["assistchief"] = "Skoda Octavia HEMS",
+        ["fastresponders"] = "BMW X5 HEMS",
+	},
     -- Grade 6 HEMS Doctor
     [6] = {
         ["assistchief"] = "Skoda Octavia Hems Support",
         ["fastresponders"] = "BMW X5 Hems Support",
         ["specilist"] = "BMW X5 Paramedic Supervisor",
-        ["kodiak"] = "Skoda Kodiak Joint Response", 
+        ["kodiak"] = "Skoda Kodiak Joint Response",
 	},
     -- Grade 7 HEMS Team Leader
     [7] = {
@@ -146,7 +146,7 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
         ["fastresponders"] = "BMW X5 Hems Support",
         ["kodiak"] = "Skoda Kodiak Joint Response", 
         ["lasb1"] = "BMW Response Motorcycle",
-	}
+	},
     -- Grade 8 Clinical Team Leader
     [8] = {
         ["paramedic"] = "Van Ambulance",
@@ -159,7 +159,7 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
         ["fastresponders"] = "BMW X5 Hems Support",
         ["kodiak"] = "Skoda Kodiak Joint Response", 
         ["lasb1"] = "BMW Response Motorcycle",
-	}
+	},
     -- Grade 9 Deputy Chief Executive Paramedic
     [9] = {
         ["paramedic"] = "Van Ambulance",
@@ -172,7 +172,7 @@ Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulan
         ["fastresponders"] = "BMW X5 Hems Support",
         ["kodiak"] = "Skoda Kodiak Joint Response", 
         ["lasb1"] = "BMW Response Motorcycle",
-	}
+	},
     -- Grade 10 Chief Executive Paramedic
     [10] = {
         ["paramedic"] = "Van Ambulance",
