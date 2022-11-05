@@ -813,7 +813,7 @@ CreateThread(function()
                 end
             end
 
-            CheckWeaponDamage(ped)
+            CheckDamage(ped)
         end
 
         playerHealth = health
