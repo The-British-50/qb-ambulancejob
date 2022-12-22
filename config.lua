@@ -35,16 +35,16 @@ Config.AlertShowInfo = 2 -- How many injuries a player must have before being al
 
 Config.Locations = { -- Edit the various interaction points for players or create new ones
 ["checking"] = {
-    [1] = vector3(308.68, -592.09, 43.28),
+    [1] = vector3(308.19, -595.35, 43.29),
     [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
 },
 ["duty"] = {
-    [1] = vector3(351.23, -588.25, 28.8),
+    [1] = vector3(311.18, -599.25, 43.29),
     [2] = vector3(-254.88, 6324.5, 32.58),
     [3] = vector3(-1419.29, -259.59, 46.48),
 },
 ["vehicle"] = {
-    [1] = vector4(326.69, -572.15, 28.8, 339.46),
+    [1] = vector4(294.578, -574.761, 43.179, 35.79),
     [2] = vector4(-234.28, 6329.16, 32.15, 222.5),
     [3] = vector4(-1427.13, -259.62, 46.48, 146.86),
 },
@@ -53,7 +53,7 @@ Config.Locations = { -- Edit the various interaction points for players or creat
     [2] = vector4(-475.43, 5988.353, 31.716, 31.34),
 },
 ["armory"] = {
-    [1] = vector3(348.69, -588.0, 28.8),
+    [1] = vector3(309.93, -602.94, 43.29),
     [2] = vector3(-245.13, 6315.71, 32.82),
     [3] = vector3(-1425.83, -251.11, 46.48),
 },
