@@ -88,9 +88,7 @@ Config.Locations = { -- Edit the various interaction points for players or creat
     [4] = {coords = vector4(1771.85, 2591.85, 45.66, 91.51), taken = false, model = 2117668672},
 },
 ["stations"] = {
-    [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)},
-    [2] = {label = Lang:t('Ambulance Station'), coords = vector4(-1434.15, -277.35, 46.54, 139.84)}
-}
+    [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)},}
 }
 
 Config.AuthorizedVehicles = { -- Vehicles players can use based on their ambulance job grade level
