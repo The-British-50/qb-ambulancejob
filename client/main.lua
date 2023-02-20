@@ -973,3 +973,74 @@ else
         end
     end)
 end
+
+RegisterNetEvent('hospital:client:ReviveLittle', function()
+    local player = PlayerPedId()
+
+    if isDead then
+        SetLaststand(false)
+        local playerPos = GetEntityCoords(player, true)
+        NetworkResurrectLocalPlayer(playerPos, true, true, false)
+        isDead = false
+        SetEntityInvincible(player, false)
+    elseif InLaststand then
+        local playerPos = GetEntityCoords(player, true)
+        NetworkResurrectLocalPlayer(playerPos, true, true, false)
+        isDead = false
+        SetEntityInvincible(player, false)
+        SetLaststand(false)
+    end
+
+    if isInHospitalBed then
+        loadAnimDict(inBedDict)
+        TaskPlayAnim(player, inBedDict , inBedAnim, 8.0, 1.0, -1, 1, 0, 0, 0, 0 )
+        SetEntityInvincible(player, true)
+        canLeaveBed = true
+    end
+
+    TriggerServerEvent("hospital:server:RestoreWeaponDamage")
+    SetEntityMaxHealth(player, 200)
+    SetEntityHealth(player, 200)
+    ClearPedBloodDamage(player)
+    SetPlayerSprint(PlayerId(), true)
+    ResetAll2()
+    ResetPedMovementClipset(player, 0.0)
+    TriggerServerEvent('hud:server:RelieveStress', 100)
+    TriggerServerEvent("hospital:server:SetDeathStatus", false)
+    TriggerServerEvent("hospital:server:SetLaststandStatus", false)
+end)
+
+function ResetAll2()
+    isBleeding = 0
+    bleedTickTimer = 0
+    advanceBleedTimer = 0
+    fadeOutTimer = 0
+    blackoutTimer = 0
+    onDrugs = 0
+    wasOnDrugs = false
+    onPainKiller = 0
+    wasOnPainKillers = false
+    injured = {}
+
+    for k, v in pairs(BodyParts) do
+        v.isDamaged = false
+        v.severity = 0
+    end
+
+    TriggerServerEvent('hospital:server:SyncInjuries', {
+        limbs = BodyParts,
+        isBleeding = tonumber(isBleeding)
+    })
+
+    CurrentDamageList = {}
+    TriggerServerEvent('hospital:server:SetWeaponDamage', CurrentDamageList)
+
+    ProcessRunStuff(PlayerPedId())
+    DoLimbAlert()
+    DoBleedAlert()
+
+    TriggerServerEvent('hospital:server:SyncInjuries', {
+        limbs = BodyParts,
+        isBleeding = tonumber(isBleeding)
+    })
+end
