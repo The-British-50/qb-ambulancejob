@@ -974,7 +974,8 @@ else
     end)
 end
 
-RegisterNetEvent('hospital:client:ReviveLittle', function()
+-- Added for paintball
+--[[RegisterNetEvent('hospital:client:ReviveLittle', function()
     local player = PlayerPedId()
 
     if isDead then
@@ -1043,4 +1044,4 @@ function ResetAll2()
         limbs = BodyParts,
         isBleeding = tonumber(isBleeding)
     })
-end
+end]]--
