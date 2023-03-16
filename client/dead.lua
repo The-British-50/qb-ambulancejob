@@ -112,6 +112,7 @@ AddEventHandler('gameEventTriggered', function(event, data)
                 local weaponLabel = QBCore.Shared.Weapons[weapon].label or 'Unknown'
                 local weaponName = QBCore.Shared.Weapons[weapon].name or 'Unknown'
                 TriggerServerEvent("qb-log:server:CreateLog", "death", Lang:t('logs.death_log_title', {playername = playerName, playerid = GetPlayerServerId(playerid)}), "red", Lang:t('logs.death_log_message', {killername = killerName, playername = playerName, weaponlabel = weaponLabel, weaponname = weaponName}))
+				TriggerServerEvent('rcore_gangs:server:vendetta', GetPlayerServerId(playerid), GetPlayerServerId(killerId))
                 deathTime = Config.DeathTime
                 OnDeath()
                 DeathTimer()
